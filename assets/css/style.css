@@ -434,7 +434,7 @@ header {
   position: absolute;
   left: -135px;
   top: 290px;
-  width: 136px; 
+  width: 136px;
   padding: 30px 26px;
   background: #5bd6e2;
   box-shadow: -15px 26px 48px rgba(85, 240, 255, 0.17);
@@ -464,4 +464,133 @@ header {
   position: absolute;
   top: 252px;
   left: -50px;
+}
+
+/* FEATURES */
+
+.features {
+  padding: 16px 0 55px 0;
+  margin-top: 78px;
+}
+
+.features-container {
+  display: flex;
+  align-items: center;
+  gap: 128px;
+}
+
+/* FEATURES IMAGE */
+.features-image {
+  position: relative;
+}
+
+.features__main-img {
+  width: 458px;
+  height: 500px;
+  border-radius: 14px;
+}
+
+.features-decorate {
+  position: absolute;
+}
+
+.features__decorate-item1 {
+  top: 8px;
+  right: 60px;
+}
+
+.features__decorate-item2 {
+  top: -18px;
+  right: 10px;
+}
+
+.features__decorate-item3 {
+  top: 42px;
+  right: -24px;
+}
+
+.features__decorate-item4 {
+  top: 50%;
+  right: -35px;
+}
+
+.features__decorate-item5 {
+  top: 61%;
+  right: 25px;
+}
+
+.features__decorate-item6 {
+  right: -45px;
+  bottom: -50px;
+}
+
+/* FEATURES CONTENT */
+.features-content {
+  padding-top: 25px;
+}
+
+.features-content__heading {
+  width: 543px;
+  padding-bottom: 24px;
+}
+
+.features-content__desc {
+  width: 510px;
+  padding-bottom: 52px;
+}
+
+.features-content__pet-vocation {
+  display: flex;
+  align-items: center;
+  gap: 55px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #ffefe7;
+}
+
+.features-content__pet-vocation--item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.features-content__pet-vocation--item:first-child img {
+  margin-left: -7px;
+}
+
+.features-content__pet-vocation--item:first-child:after {
+  position: absolute;
+  bottom: -13px;
+  content: "";
+  display: inline-block;
+  width: 95px;
+  height: 0px;
+  border: 1px solid #ff5b2e;
+}
+
+.features-content__pet-vocation--item h4 {
+  font-weight: 600;
+  font-size: 1.8rem;
+  line-height: 1;
+  color: #48496a;
+}
+
+.features-content__sub-desc {
+  margin-top: 36px;
+  margin-bottom: 32px;
+  width: 391px;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 1.71428;
+  color: #656689;
+}
+
+.features-content__more-infor {
+  display: inline-block;
+  padding-bottom: 3px;
+  border-bottom: 1.5px solid #FF5D31;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 1;
+  color: #ff5d31;
 }
