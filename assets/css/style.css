@@ -97,7 +97,12 @@ body {
 
 /* HEADER */
 header {
+  position: sticky;
+  top: -18px;
   padding-top: 26px;
+  padding-bottom: 8px;
+  background-color: #fff;
+  z-index: 10;
 }
 
 .header-content {
@@ -132,6 +137,7 @@ header {
 /* HERO */
 .hero {
   padding-top: 92px;
+  padding-bottom: 70px;
 }
 
 .hero-content {
@@ -173,6 +179,67 @@ header {
   height: 244px;
   border-radius: 16px;
   border: 1px solid #fff;
+}
+
+/* TYPE PET RATE IN HERO */
+.hero__type-pet {
+  position: absolute;
+  bottom: -98px;
+  right: 5px;
+  width: 250px;
+  padding: 18px 14px;
+  background-color: #fff;
+  box-shadow: -17px 14px 68px -4px rgba(207, 174, 132, 0.25);
+  border-radius: 10px;
+}
+
+.hero__type-pet .type-pet__list {
+  display: flex;
+}
+
+.hero__type-pet .type-pet__list img {
+  margin-right: 10px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.hero__type-pet .type-pet__list img:hover {
+  opacity: 0.9;
+}
+
+.type-pet__list .type-pet__list--content h3 {
+  font-weight: 600;
+  font-size: 1.4rem;
+  line-height: 1;
+  color: #181e52;
+  cursor: pointer;
+}
+
+.type-pet__list .type-pet__list--content h3:hover {
+  text-decoration: underline;
+}
+
+.type-pet__list .type-pet__list--content .pet-rate__one {
+  width: 118px;
+  height: 4px;
+  border-radius: 10px;
+  background-color: #ebebf2;
+  margin-top: 6px;
+}
+
+.type-pet__list .type-pet__list--content .pet-rate__two {
+  width: 39px;
+  height: 4px;
+  border-radius: 10px;
+  background-color: #ebebf2;
+  margin-top: 6px;
+}
+
+.hero__type-pet .type-pet__line {
+  width: 100%;
+  margin: 20px 0;
+  border: 1px solid #f2f2f2;
 }
 
 /* hero content */
@@ -242,4 +309,159 @@ header {
   line-height: 1;
   text-decoration-line: underline;
   color: var(--main-color);
+}
+
+/* ABOUT */
+.about {
+  padding: 55px 0;
+  margin-top: 78px;
+}
+
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.about-content__name {
+  margin-bottom: 15px;
+}
+
+.about-content__heading {
+  width: 446px;
+  margin-bottom: 24px;
+}
+
+.about-content__desc {
+  width: 430px;
+  margin-bottom: 55px;
+}
+
+/*  ABOUT CHECKBOX CHOICES */
+.about-content__choices {
+}
+
+.about-content__choices--row {
+  display: flex;
+}
+
+.choices__row-1 {
+  gap: 62px;
+  margin-bottom: 34px;
+}
+
+.choices__row-2 {
+  gap: 36px;
+}
+
+.about-content__choices--item {
+  display: flex;
+  align-items: center;
+}
+
+.about-content__choices--item label {
+  position: relative;
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  font-size: 1.8rem;
+  line-height: 1;
+  color: #48496a;
+}
+
+.about-content__choices--item label::before,
+.about-content__choices--item label::after {
+  content: "";
+  display: inline-block;
+}
+
+.about-content__choices--item label::before {
+  margin-right: 10px;
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+  border: 1px solid #9b9dc9;
+}
+
+.about-content__choices--item input:checked ~ label::before {
+  border-color: #ff5d31;
+  background-color: #ff5d31;
+}
+
+.about-content__choices--item input:checked ~ label::after {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  width: 12px;
+  height: 6px;
+  border-left: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  rotate: -45deg;
+}
+
+/* ABOUT IMAGAE */
+.about-image {
+  position: relative;
+}
+
+.about-image .about__main-img {
+  width: 450px;
+  display: block;
+  z-index: 4;
+}
+
+.about-image .about-image__decorate {
+  position: absolute;
+  right: -70px;
+  top: 290px;
+  width: 135px;
+  height: 95px;
+  z-index: -1;
+}
+
+.about-image .about-image__background {
+  position: absolute;
+  bottom: 0;
+  left: -45px;
+  width: 494px;
+  height: 270px;
+  background: linear-gradient(180deg, #fce0ef 0%, #fac3d1 100%);
+  border-radius: 16px;
+  z-index: -1;
+}
+
+.about-image .about-image__experience {
+  position: absolute;
+  left: -135px;
+  top: 290px;
+  width: 136px; 
+  padding: 30px 26px;
+  background: #5bd6e2;
+  box-shadow: -15px 26px 48px rgba(85, 240, 255, 0.17);
+  border-radius: 10px;
+}
+
+.about-image__experience--heading {
+  width: 84px;
+  font-weight: 700;
+  font-size: 4.2rem;
+  line-height: 1;
+  text-align: center;
+  color: #ffffff;
+}
+
+.about-image__experience--desc {
+  width: 84px;
+  margin-top: 14px;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 1.43;
+  text-align: center;
+  color: #c6f4f9;
+}
+
+.cat-foot {
+  position: absolute;
+  top: 252px;
+  left: -50px;
 }
