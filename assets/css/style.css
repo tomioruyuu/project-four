@@ -741,22 +741,48 @@ header {
 /* TEAM MEMBER */
 .team-member {
   display: flex;
+  align-items: center;
+  gap: 68px;
 }
 
 .team-member--down {
   position: relative;
 }
 
-.team-member__down--background {
+.team-member--down:hover .member-avatar {
+  scale: 1.05;
+}
+
+/* BACKGROUND MEMBER */
+.team-member__background {
   width: 234px;
   height: 266px;
-  background: rgb(154, 120, 190);
+  border-radius: 129px;
+}
+
+.tmb__iteam-1 {
   background: linear-gradient(
     0deg,
     rgba(154, 120, 190, 1) 0%,
     rgba(45, 189, 253, 1) 100%
   );
-  border-radius: 129px;
+}
+
+.tmb__iteam-2 {
+  background: linear-gradient(180deg, #ff997e 0%, #f3752e 100%);
+}
+
+.tmb__iteam-3 {
+  background: linear-gradient(180deg, #fabf3e 0%, #ffa14a 100%);
+}
+
+.tmb__iteam-4 {
+  background: rgb(120, 255, 197);
+  background: linear-gradient(
+    0deg,
+    rgba(120, 255, 197, 1) 18%,
+    rgba(30, 182, 218, 1) 93%
+  );
 }
 
 .team-member--down .member-avatar {
@@ -765,12 +791,18 @@ header {
   width: 234px;
   height: 285px;
   border-radius: 0 0 129px 129px;
-  z-index: 4;
+  transition: 0.3s;
 }
 
 .half-circle-down {
   position: absolute;
   bottom: 78px;
+  right: -18px;
+}
+
+.half-circle-up {
+  position: absolute;
+  top: 0;
   right: -18px;
 }
 
@@ -787,10 +819,176 @@ header {
 }
 
 .team-member__infor--name {
-  font-family: 'Sora';
+  font-family: "Sora";
   font-weight: 600;
   font-size: 2.2rem;
   line-height: 1;
   color: #000958;
   margin-top: 14px;
+}
+
+/*  TEAM ACTION */
+.team-action {
+  text-align: center;
+  margin-top: 48px;
+}
+
+.team-action__btn {
+  min-width: 193px;
+  color: #ff5b2e;
+  border-radius: 99px;
+  border: 1px solid #ff9b7e;
+}
+
+.team-action__btn:hover {
+  box-shadow: 0px 13px 26px -8px rgba(255, 91, 46, 0.42);
+}
+
+/* CHOICES */
+.choices {
+  background: #fff6ed;
+  padding: 86px 0 86px 0;
+}
+
+/* CHOICES TITLE */
+.choices-title {
+  text-align: center;
+  margin-bottom: 56px;
+}
+
+.choices-title__desc {
+  margin: auto;
+  margin-top: 34px;
+  margin-bottom: 38px;
+  width: 710px;
+}
+
+.choices-title__time {
+  position: relative;
+  display: flex;
+  justify-content: space-evenly;
+  width: 276px;
+  margin: auto;
+  background-color: #fff;
+  border: 1px solid #ff997a;
+  border-radius: 99px;
+}
+
+.choices-title__time--item label {
+  display: inline-block;
+  padding: 20px 40px;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 1;
+  color: #ff5b2e;
+  border-radius: 99px;
+  cursor: pointer;
+}
+
+.choices-title__time--item [type="radio"]:checked ~ label {
+  background: #ff5b2e;
+  color: #fff;
+}
+
+.choices-title__time--sale {
+  position: absolute;
+  right: -115px;
+  top: -12px;
+}
+
+/* CHOICES CONTENT */
+.choices-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 44px;
+}
+
+.choices-content__column {
+  padding: 30px 28px 43px 28px;
+  background-color: #fff;
+  border-radius: 20px;
+}
+
+.choices-content__column-type {
+  margin-bottom: 8px;
+  font-weight: 400;
+  font-size: 1.2rem;
+  line-height: 1;
+  color: #ff5b2e;
+}
+
+.choices-content__column--method-care {
+  margin-bottom: 24px;
+  font-family: "Sora";
+  font-weight: 600;
+  font-size: 1.8rem;
+  line-height: 1;
+  color: #3f4065;
+}
+
+.choices-content__column--price {
+  font-family: "Sora";
+  font-weight: 700;
+  font-size: 3.3rem;
+  line-height: 1.03;
+  color: var(--main-color);
+  margin-bottom: 22px;
+}
+
+.choices-content__column--btn {
+  --height: 44px;
+
+  min-width: 246px;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: var(--height);
+  color: #ff5b2e;
+  border: 1px solid rgba(255, 91, 46, 0.6);
+  border-radius: 39px;
+  margin-bottom: 24px;
+}
+
+.choices-content__column--btn:hover {
+  color: #fff;
+  background: #FF5B2E;
+}
+
+.choices-content__column-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.choices-content__column-list li {
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 1;
+  color: #656689;
+}
+
+.choices-content__column-list li::before {
+  content: "";
+  margin-right: 15px;
+  display: inline-block;
+  width: 8px;
+  height: 4px;
+  rotate: -45deg;
+}
+
+.allowed::before {
+  border-left: 1px solid #ff5b2e;
+  border-bottom: 1px solid #ff5b2e;
+}
+
+.forbiden::before {
+  border-left: 1px solid rgba(255, 91, 46, 0.4);
+  border-bottom: 1px solid rgba(255, 91, 46, 0.4);
+}
+
+/* REVIEW */
+.review {
+  padding: 77px 0 94px 0;
 }
